@@ -48,7 +48,7 @@
     nav a{color:rgba(255,255,255,0.95);text-decoration:none;font-weight:600;margin-left:8px}
     nav a:hover{text-decoration:underline}
 
-    /* Foto de perfil */
+    /* Foto perfil */
     .foto-perfil {
       width: 46px;
       height: 46px;
@@ -81,25 +81,22 @@
     .project h4{margin:0 0 8px 0}
     .muted{color:var(--muted)}
 
-    /* Contact list */
-    .contacts{display:flex;flex-direction:column;gap:10px}
+    /* Contact + docentes */
     .contact-link{display:flex;align-items:center;gap:12px;padding:12px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfbff);box-shadow:var(--shadow);text-decoration:none;color:inherit}
-    .contact-link svg{width:28px;height:28px;border-radius:8px;flex-shrink:0}
+
     footer{margin:36px 0 12px;text-align:center;color:var(--muted);font-size:0.95rem}
 
-    /* Responsive layout */
     @media(min-width:900px){
       .hero{grid-template-columns:1fr 420px}
       .about{grid-template-columns:1fr 360px}
     }
-
-    /* Small helpers */
-    .chip{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(108,99,255,0.12);color:var(--accent);font-weight:600}
-    .socials{display:flex;gap:8px}
   </style>
 </head>
+
 <body>
   <div class="container">
+
+    <!-- NAVBAR -->
     <header>
       <div class="nav">
         <div class="brand">
@@ -114,47 +111,48 @@
           <a href="#sobre-mi">Sobre mí</a>
           <a href="#proyectos">Proyectos</a>
           <a href="#contacto">Contacto</a>
-          <a href="https://www.linkedin.com/in/diego-pinto-47453b398" target="_blank">LinkedIn</a>
+          <a href="#docentes">Docentes</a>
         </nav>
       </div>
     </header>
 
-    <!-- Hero / Inicio -->
+    <!-- HERO -->
     <section id="inicio" class="hero">
       <div class="card-hero">
         <h2>¡Hola! Soy Diego Pinto</h2>
         <p class="muted">Estudiante de Administración de Negocios en la Universidad Católica San Pablo. Amante de los deportes y actividades en el exterior.</p>
+
         <div class="actions">
           <a class="btn btn-primary" href="#contacto">Contáctame</a>
           <a class="btn btn-ghost" href="#proyectos">Ver proyectos</a>
-          <span class="chip">Universidad Católica San Pablo</span>
         </div>
+
         <div style="margin-top:18px;color:var(--muted);font-size:0.95rem">
           <strong>Email:</strong>
           <a href="mailto:diego.pinto.quenaya@ucsp.edu.pe">diego.pinto.quenaya@ucsp.edu.pe</a>
         </div>
       </div>
+
       <aside style="display:flex;align-items:center;justify-content:center">
         <div style="width:100%;max-width:420px;border-radius:12px;padding:18px;background:linear-gradient(180deg, rgba(255,255,255,0.98), rgba(250,250,255,0.98));box-shadow:var(--shadow)">
           <h3 style="margin-top:0">Datos rápidos</h3>
           <p class="muted">Carrera: Administración de Negocios<br>Universidad: Universidad Católica San Pablo<br>Intereses: Deportes, actividades en el exterior, gestión y emprendimiento</p>
-          <div style="margin-top:12px" class="socials">
+          <div style="margin-top:12px">
             <a class="btn btn-primary" href="https://www.linkedin.com/in/diego-pinto-47453b398" target="_blank">Mi LinkedIn</a>
           </div>
         </div>
       </aside>
     </section>
 
-    <!-- Sobre mí -->
+    <!-- SOBRE MI -->
     <section id="sobre-mi">
       <div class="about">
         <div class="bio">
           <h3>Sobre mí</h3>
-          <p>Soy estudiante de Administración de Negocios en la Universidad Católica San Pablo. Me apasionan los deportes y las actividades al aire libre; disfruto trabajar en equipo y aprender sobre gestión, estrategia y emprendimiento. Busco oportunidades para aplicar mis conocimientos y seguir desarrollándome profesionalmente.</p>
-          <h4 style="margin-top:12px">Habilidades</h4>
-          <p class="muted">Comunicación, trabajo en equipo, pensamiento analítico, planificación y liderazgo en actividades deportivas.</p>
+          <p>Soy estudiante de Administración de Negocios en la Universidad Católica San Pablo. Me apasionan los deportes y las actividades al aire libre; disfruto trabajar en equipo y aprender sobre gestión, estrategia y emprendimiento.</p>
         </div>
-        <div style="display:flex;flex-direction:column;gap:12px">
+
+        <div>
           <div class="bio">
             <h4>Educación</h4>
             <p class="muted"><strong>Universidad Católica San Pablo</strong><br>Estudiante de Administración de Negocios.</p>
@@ -167,45 +165,76 @@
       </div>
     </section>
 
-    <!-- Proyectos -->
+    <!-- PROYECTOS -->
     <section id="proyectos">
       <h3>Proyectos</h3>
       <div class="grid">
         <article class="project">
           <h4>📄 Página personal (este sitio)</h4>
           <p class="muted">Página de presentación y portafolio personal, publicada con GitHub Pages.</p>
-          <p style="margin-top:12px"><a class="btn btn-primary" href="#inicio">Ver página</a></p>
         </article>
+
         <article class="project">
           <h4>📚 Proyecto universitario</h4>
-          <p class="muted">Trabajo académico sobre gestión y administración — resultados y presentación pública.</p>
-          <p style="margin-top:12px"><a class="btn btn-ghost" href="#contacto">Solicitar info</a></p>
+          <p class="muted">Trabajo académico sobre gestión y administración.</p>
         </article>
+
         <article class="project">
           <h4>⚽ Actividades deportivas</h4>
-          <p class="muted">Organización y coordinación de eventos deportivos en la universidad y actividades al aire libre.</p>
-          <p style="margin-top:12px"><a class="btn btn-ghost" href="#contacto">Contactar</a></p>
+          <p class="muted">Organización y coordinación de eventos deportivos en la universidad.</p>
         </article>
       </div>
     </section>
 
-    <!-- Contacto -->
+    <!-- CONTACTO -->
     <section id="contacto">
       <h3>Contacto</h3>
-      <p class="muted">Puedes escribirme por correo o visitar mi perfil de LinkedIn. También comparto algunos contactos de referencia:</p>
+      <p class="muted">Puedes escribirme por correo o visitar mi LinkedIn.</p>
+
       <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:12px">
-        <a class="contact-link" href="mailto:diego.pinto.quenaya@ucsp.edu.pe">
-          📧 diego.pinto.quenaya@ucsp.edu.pe
+        <a class="contact-link" href="mailto:diego.pinto.quenaya@ucsp.edu.pe">📧 Email</a>
+        <a class="contact-link" href="https://www.linkedin.com/in/diego-pinto-47453b398" target="_blank">🔗 Mi LinkedIn</a>
+      </div>
+    </section>
+
+    <!-- DOCENTES -->
+    <section id="docentes">
+      <h3>Docentes</h3>
+      <p class="muted">Perfiles profesionales de mis docentes en LinkedIn:</p>
+
+      <div style="display:flex; gap:16px; flex-wrap:wrap; margin-top:12px">
+
+        <a class="contact-link" href="https://www.linkedin.com/in/juan-alonso-sard%C3%A1-candia-1b535768" target="_blank">
+          👨‍🏫 Juan Alonso Sardá Candia — LinkedIn
         </a>
-        <a class="contact-link" href="https://www.linkedin.com/in/diego-pinto-47453b398" target="_blank">
-          🔗 Mi LinkedIn
+
+        <a class="contact-link" href="https://www.linkedin.com/in/mar%C3%ADa-bel%C3%A9n-bocchio-linares-96846035" target="_blank">
+          👩‍🏫 María Belén Bocchio — LinkedIn
         </a>
+
+        <a class="contact-link" href="https://www.linkedin.com/in/maribel-marianela-8453a61a7" target="_blank">
+          👩‍🏫 Maribel Quiroz — LinkedIn
+        </a>
+
+        <a class="contact-link" href="https://www.linkedin.com/in/m%C3%B3nica-widmann-orihuela-a85a3653" target="_blank">
+          👩‍🏫 Mónica Widmann — LinkedIn
+        </a>
+
+        <a class="contact-link" href="https://www.linkedin.com/in/fabiola-postigo-99996b3b" target="_blank">
+          👩‍🏫 Fabiola Postigo — LinkedIn
+        </a>
+
+        <a class="contact-link" href="https://www.linkedin.com/in/ecuadrosv" target="_blank">
+          👨‍🏫 Ernesto Cuadros — LinkedIn
+        </a>
+
       </div>
     </section>
 
     <footer>
       © 2025 Diego Pinto — Universidad Católica San Pablo · Hecho con HTML & CSS · Publicado en GitHub Pages
     </footer>
+
   </div>
 
   <script>
@@ -217,8 +246,6 @@
       })
     });
   </script>
+
 </body>
-</ul>
-
 </html>
-
