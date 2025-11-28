@@ -19,14 +19,31 @@
     }
     *{box-sizing:border-box}
     html,body{height:100%}
+
+    /* ⭐ NUEVO FONDO */
     body{
       margin:0;
       font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
       -webkit-font-smoothing:antialiased;
-      background: linear-gradient(180deg, #a0f0ff 0%, #0077b6 100%);
+
+      background: url("https://ucsp.edu.pe/wp-content/uploads/2024/04/san-pablo-incluye-pensamiento-computacional-1.jpg")
+                  no-repeat center center fixed;
+      background-size: cover;
+
       color:#111827;
       line-height:1.5;
     }
+
+    /* ⭐ CAPA SUAVE PARA QUE EL TEXTO SIGA SIENDO LEGIBLE */
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background: rgba(255,255,255,0.55); /* puedes bajarlo a 0.40 si quieres verlo más */
+      backdrop-filter: blur(2px);
+      z-index:-1;
+    }
+
     .container{max-width:var(--maxw);margin:0 auto;padding:24px}
 
     header{backdrop-filter: blur(6px);position:sticky;top:12px;margin:12px 0;z-index:50}
@@ -181,7 +198,6 @@
       </div>
     </section>
 
-    <!-- COMPAÑEROS DE CLASES -->
     <section id="companeros">
       <h2>Compañeros de clases</h2>
       <p class="muted">Páginas web de mis compañeros:</p>
@@ -215,5 +231,11 @@
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
       a.addEventListener('click', e=>{
         e.preventDefault();
-        const target = document.query
+        const target = document.getElementById(a.getAttribute('href').substring(1));
+        if(target) target.scrollIntoView({behavior:"smooth"});
+      });
+    });
+  </script>
 
+</body>
+</html>
